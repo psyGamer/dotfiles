@@ -229,6 +229,10 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
+--	awful.key({ modkey, "Control" }, "Escape", funtion() awful.spawn("/usr/bin/rofi -show drun -modi drun) end ,{description = "launch rofi", group = "launcher")),
+	awful.key({ modkey, "Control" }, "Escape", function() awful.spawn("/usr/bin/rofi -show drun -modi drun") end, 
+			  { description = "Launch Rofi", group = "launcher"}),
+	awful.key({ modkey }, "", function() awful.spawn("rofi -show drun") end),
 	awful.key({ modkey,			  }, "s",	   hotkeys_popup.show_help,
 			  {description="show help", group="awesome"}),
 	awful.key({ modkey,			  }, "Left",   awful.tag.viewprev,
@@ -569,9 +573,13 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
--- Autostart Progams
+-- {{{ Autostart Progams
+-- Compositing & Wallpaper
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("~/.scripts/startup.sh")
---awful.spawn.with_shell("kitty")
 
+awful.spawn.with_shell("~/.scripts/startup.sh") -- TODO Remove personal stuff
+-- Map Super_L to Super_l+Control_L+Escape (used for rofi)
+awful.spawn.with_shell("xcape -e 'Super_L=Super_L|Control_L|Escape'")
+--awful.spawn.with_shell("kitty")
+-- }}}
