@@ -1,0 +1,56 @@
+configuration {
+	font: "Iosevka Nerd Font 12"; // monospace     */
+/*	font: "Feather 12";           // non-monospace */
+	icon-pack: "Papirus";
+
+	display-drun: "Applications:";
+	display-window: "Windows:";
+
+	show-icons: true;
+	drun-display-form: "{icon} {name}";
+}
+
+* {
+	bg: #ff0000;
+	bg-card: #00ff00;
+	bg-card-hover: #0000ff;
+
+	fg: #eeeeee;
+	fg-hover: #dedede;
+
+	background-color: @bg;
+	color: @fg;
+}
+
+listview {
+	background-color: @bg;
+	padding: 3;
+}
+
+element {
+	background-color: @bg-card;
+	color: @fg;
+	padding: 3;
+}
+element selected {
+	background-color: @bg-card-hover;
+	color: @fg-hover;
+}
+element-text, element-icon {
+	background-color: inherit;
+	color: inherit;
+}
+
+entry {
+	background-color: red;
+}
+
+inputbar {
+	background-color: @bg-alt;
+	padding: 3;
+}
+
+prompt {
+	background-color: @bg-alt;
+	color: @fg;
+}

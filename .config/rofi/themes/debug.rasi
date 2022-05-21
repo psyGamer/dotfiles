@@ -1,0 +1,63 @@
+configuration {
+	font: "Iosevka Nerd Font 12"; // monospace     */
+/*	font: "Feather 12";           // non-monospace */
+	icon-pack: "Papirus";
+
+	display-drun: "Applications:";
+	display-window: "Windows:";
+
+	show-icons: true;
+	drun-display-form: "{icon} {name}";
+}
+
+* {
+	bg: #000000;
+	bg-alt: #111111;
+
+	fg: #ffffff;
+	fg-alt: #eeeeee;
+
+	color: @fg;
+	background-color: @bg;
+}
+
+listview {
+	background-color: darkgray;
+	padding: 3;
+}
+
+element {
+	background-color: cyan;
+	padding: 3;
+}
+element selected {
+	background-color: magenta;
+}
+element-text {
+	color: yellow;
+}
+element-text selected {
+	color: lime;
+}
+
+entry {
+	background-color: red;
+}
+
+inputbar {
+	background-color: blue;
+	padding: 3;
+}
+
+mainbox {
+	background: gold;
+	padding: 5;
+}
+
+prompt {
+	background-color: gold;
+}
+
+window {
+	transparency: "real";
+}

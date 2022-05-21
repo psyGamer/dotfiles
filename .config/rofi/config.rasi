@@ -1,6 +1,7 @@
 configuration {
 	modi: "window,run,drun";
-/*	font: "mono 12";*/
+/*	font: "Iosevka Nerd Font 12";	// monospace 	 */
+	font: "Feather 12";				// non-monospace */
 /*	location: 0;*/
 /*	yoffset: 0;*/
 /*	xoffset: 0;*/
@@ -40,7 +41,7 @@ configuration {
 /*	dpi: -1;*/
 /*	threads: 0;*/
 /*	scroll-method: 0;*/
-/*	window-format: "{w}    {c}   {t}";*/
+/*	window-format: "{w}    {c}	 {t}";*/
 /*	click-to-exit: true;*/
 /*	max-history-size: 25;*/
 /*	combi-hide-mode-prefix: false;*/
@@ -136,12 +137,15 @@ configuration {
 /*	me-select-entry: "MousePrimary";*/
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
-  timeout {
-      action: "kb-cancel";
-      delay:  0;
-  }
-  filebrowser {
-      directories-first: true;
-      sorting-method:    "name";
-  }
+	timeout {
+		action: "kb-cancel";
+		delay:  0;
+	}
+	filebrowser {
+		directories-first: true;
+		sorting-method:	 "name";
+	}
 }
+
+@theme "~/.config/rofi/themes/arctic-night.rasi"
+
