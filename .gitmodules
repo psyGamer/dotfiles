@@ -10,3 +10,6 @@
 [submodule ".resource/papirus-icon-theme"]
 	path = .resources/papirus-icon-theme
 	url = https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
+[submodule ".resources/simp1e"]
+	path = .resources/simp1e
+	url = https://gitlab.com/zoli111/simp1e.git
