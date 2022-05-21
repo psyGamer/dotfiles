@@ -1,0 +1,57 @@
+# Avoid recursion
+.dotfiles
+.dotfiles-git
+
+# Some files/folders which should never be included
+.local
+.cache
+.cargo
+.minecraft
+.viminfo
+.zsh_history
+.bash_history
+.wakatime-*
+.gradle
+.rustup
+.directory
+.m2
+.lunarclient
+.konan
+.mozilla
+.npm
+.pnpm
+.yarn
+.stack
+.renpy
+.themes
+.var
+.vscode
+.vscode-oss
+go
+
+# Home data folders (german)
+Bilder
+Dokumente
+Downloads
+Games
+Musik
+Schreibtisch
+Videos
+Vorlagen
+Öffentlich
+
+.git-credentials # Just to be save
+
+# Other stuff which causes problems
+.config/fish/fish_variables
+
+# Bloated apps (aka. Electron)
+.config/Code
+.config/GeForce NOW
+.config/VSCodium
+.config/chromium
+.config/discord
+.config/figma-linux
+.config/plasmaConfSaver
+.config/lunarclient
+.config/spotify
