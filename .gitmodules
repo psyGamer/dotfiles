@@ -4,3 +4,6 @@
 [submodule ".resources/Arctic-Night-KDE"]
 	path = .resources/Arctic-Night-KDE
 	url = https://github.com/psyGamer/Arctic-Night-KDE.git
+[submodule ".resources/Twilight-kde"]
+	path = .resources/Twilight-kde
+	url = https://github.com/yeyushengfan258/Twilight-kde.git
