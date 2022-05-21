@@ -42,9 +42,6 @@ Vorlagen
 
 .git-credentials # Just to be save
 
-# Other stuff which causes problems
-.config/fish/fish_variables
-
 # Bloated apps (aka. Electron)
 .config/Code
 .config/GeForce NOW
