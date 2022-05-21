@@ -1,0 +1,7 @@
+{
+  "decompile.decompiler": "CFR",
+  "decompile.showsynthetics": false,
+  "decompile.stripdebug": false,
+  "decompile.showname": true,
+  "decompile.timeout": 9000
+}

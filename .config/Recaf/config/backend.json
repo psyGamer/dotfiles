@@ -1,0 +1,16 @@
+{
+  "backend.recents": [
+    "/home/manuel/Code/Minecraft/Mods/Wireframe/build/libs/wireframe-0.2-sources.jar",
+    "/home/manuel/.local/share/multimc/instances/1.12.2/.minecraft/mods/SchnurriTV's Sexmod-1.4.0.jar",
+    "/home/manuel/Downloads/SchnurriTV's Sexmod-1.4.0.jar",
+    "/home/manuel/Downloads/jennymod2.jar",
+    "/home/manuel/Downloads/rainbow.jar",
+    "/media/Storage/Code/Minecraft/Mods/Wireframe/build/libs/wireframe-0.1.jar"
+  ],
+  "backend.recentopen": "/home/manuel/Code/Minecraft/Mods/Wireframe/build/libs/wireframe-0.2-sources.jar",
+  "backend.recentsave.app": "/home/manuel/Downloads/jenny2",
+  "backend.recentsave.workspace": "/usr/bin",
+  "backend.recentsave.map": "/usr/bin",
+  "backend.firsttime": false,
+  "backend.compressexport": true
+}

@@ -1,0 +1,25 @@
+{
+  "display.classmode": "DECOMPILE",
+  "display.filemode": "AUTOMATIC",
+  "display.language": {
+    "path": "translations/en.json",
+    "internal": true
+  },
+  "display.appstyle": {
+    "path": "style/ui-dark.css",
+    "internal": true
+  },
+  "display.textstyle": {
+    "path": "style/text-dark.css",
+    "internal": true
+  },
+  "display.uifontsize": 12,
+  "display.monofontsize": 12,
+  "display.uifont": "FuraCode Nerd Font",
+  "display.monofont": "JetBrains Mono",
+  "display.forceWordWrap": false,
+  "display.suggest.classerrors": true,
+  "display.maxrecent": 6,
+  "display.usesystemmenubar": false,
+  "display.maxtreedepth": 30
+}

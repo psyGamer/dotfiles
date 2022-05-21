@@ -1,0 +1,45 @@
+{
+  "binding.saveapp": [
+    "ctrl",
+    "e"
+  ],
+  "binding.save": [
+    "ctrl",
+    "s"
+  ],
+  "binding.undo": [
+    "ctrl",
+    "u"
+  ],
+  "binding.find": [
+    "ctrl",
+    "f"
+  ],
+  "binding.close.window": [
+    "ctrl",
+    "esc"
+  ],
+  "binding.close.tab": [
+    "ctrl",
+    "w"
+  ],
+  "binding.gotodef": [
+    "f3"
+  ],
+  "binding.rename": [
+    "ctrl",
+    "r"
+  ],
+  "binding.swapview": [
+    "ctrl",
+    "q"
+  ],
+  "binding.incfontsize": [
+    "equals",
+    "ctrl"
+  ],
+  "binding.decfontsize": [
+    "minus",
+    "ctrl"
+  ]
+}

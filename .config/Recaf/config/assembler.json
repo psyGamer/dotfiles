@@ -1,0 +1,7 @@
+{
+  "assembler.verify": true,
+  "assembler.variables": true,
+  "assembler.useexistingdata": true,
+  "assembler.stripdebug": false,
+  "assembler.phantoms": true
+}
