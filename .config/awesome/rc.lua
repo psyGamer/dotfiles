@@ -229,7 +229,6 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
---	awful.key({ modkey, "Control" }, "Escape", funtion() awful.spawn("/usr/bin/rofi -show drun -modi drun) end ,{description = "launch rofi", group = "launcher")),
 	awful.key({ modkey, "Control" }, "Escape", function() awful.spawn("/usr/bin/rofi -show drun -modi drun") end, 
 			  { description = "Launch Rofi", group = "launcher"}),
 	awful.key({ modkey }, "", function() awful.spawn("rofi -show drun") end),
