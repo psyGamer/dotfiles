@@ -7,3 +7,6 @@
 [submodule ".resources/Twilight-kde"]
 	path = .resources/Twilight-kde
 	url = https://github.com/yeyushengfan258/Twilight-kde.git
+[submodule ".resource/papirus-icon-theme"]
+	path = .resources/papirus-icon-theme
+	url = https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
