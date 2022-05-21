@@ -1,0 +1,66 @@
+// Place your key bindings in this file to override the defaults
+[
+	{
+		"key": "ctrl+alt+s",
+		"command": "saveAll"
+	},
+	{
+		"key": "ctrl+shift+7",
+		"command": "editor.action.commentLine"
+	},
+	{
+		"key": "ctrl+shift+oem_comma",
+		"command": "extension.insertSemicolon",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+oem_2",
+		"command": "-extension.insertSemicolon",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.duplicateSelection"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "-workbench.view.debug"
+	},
+	{
+		"key": "ctrl+shift+alt+oem_comma",
+		"command": "extension.insertSemicolonWithNewLine",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+a",
+		"command": "explorer.newFile"
+	},
+	{
+		"key": "ctrl+shift+oem_2",
+		"command": "-extension.insertSemicolonWithNewLine",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "-editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+d",
+		"command": "editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+k",
+		"command": "-editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+alt+a",
+		"command": "explorer.newFolder"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quit"
+	}
+]
