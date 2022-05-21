@@ -1,3 +1,3 @@
 [submodule ".themes/Material-GTK-Themes"]
-	path = .themes/Material-GTK-Themes
+	path = .resources/Material-GTK-Themes
 	url = https://github.com/Fausto-Korpsvart/Material-GTK-Themes.git
