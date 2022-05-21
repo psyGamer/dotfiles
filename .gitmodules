@@ -1,3 +1,6 @@
 [submodule ".themes/Material-GTK-Themes"]
 	path = .resources/Material-GTK-Themes
 	url = https://github.com/Fausto-Korpsvart/Material-GTK-Themes.git
+[submodule ".resources/Arctic-Night-KDE"]
+	path = .resources/Arctic-Night-KDE
+	url = https://github.com/psyGamer/Arctic-Night-KDE.git
