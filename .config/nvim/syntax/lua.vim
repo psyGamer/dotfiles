@@ -361,3 +361,6 @@ let b:current_syntax = "lua"
 let &cpo = s:cpo_save
 unlet s:cpo_save
 " vim: et ts=8 sw=2
+
+" folding method
+set foldmethod=marker
