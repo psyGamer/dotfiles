@@ -80,8 +80,10 @@ bindings.keyboard = {
 		-- }}}
 
 		-- {{{ Launcher / Prompts
-		awful.key({ modkey, "Control" }, "Escape", function() awful.spawn("/usr/bin/rofi -show drun -modi drun") end, 
-				  { description = "Launch Rofi", group = groupNames.launcher }),
+		awful.key({ modkey            }, "space", function() awful.spawn("/usr/bin/rofi -show drun -modi drun") end, 
+				  { description = "Open application launcher", group = groupNames.launcher }),
+		awful.key({ modkey, "Shift"   }, "space", function() awful.spawn("/usr/bin/rofi -show run -modi run") end, 
+				  { description = "Open run launcher", group = groupNames.launcher }),
 
 		awful.key({ modkey 			  }, "r",	  function() awful.screen.focused().mypromptbox:run() end,
 				  { description = "Run prompt", group = groupNames.launcher }),
@@ -137,9 +139,9 @@ bindings.keyboard = {
 				  { description = "Increase the number of columns", group = groupNames.layout }),
 		awful.key({ modkey, "Control" }, "l",	  function() awful.tag.incncol(-1, nil, true)	  end,
 				  { description = "Decrease the number of columns", group = groupNames.layout }),
-		awful.key({ modkey,			  }, "space", function() awful.layout.inc( 1)				  end,
+		awful.key({ modkey,			  }, "l", function() awful.layout.inc( 1)				  end,
 				  { description = "Select next", group = groupNames.layout }),
-		awful.key({ modkey, "Shift"   }, "space", function() awful.layout.inc(-1)				  end,
+		awful.key({ modkey, "Shift"   }, "l", function() awful.layout.inc(-1)				  end,
 				  { description = "Select previous", group = groupNames.layout }),
 		-- }}}
 
@@ -223,6 +225,7 @@ bindings.keyboard = {
 			{ description = "Toggle fullscreen", group = groupNames.client })
 	)
 }
+-- }}}
 
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.

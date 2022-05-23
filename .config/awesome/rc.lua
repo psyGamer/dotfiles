@@ -361,12 +361,12 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- {{{ Autostart Progams
+-- Disable KDE keybindings
+awful.spawn.with_shell("systemctl --user mask --runtime plasma-kglobalaccel.service")
+
 -- Compositing & Wallpaper
 awful.spawn.with_shell("picom")
 awful.spawn.with_shell("nitrogen --restore")
 
 awful.spawn.with_shell("~/.scripts/startup.sh") -- TODO Remove personal stuff
--- Map Super_L to Super_l+Control_L+Escape (used for rofi)
-awful.spawn.with_shell("xcape -e 'Super_L=Super_L|Control_L|Escape'")
---awful.spawn.with_shell("kitty")
 -- }}}
