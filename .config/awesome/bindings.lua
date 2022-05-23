@@ -151,10 +151,10 @@ bindings.keyboard = {
 		-- }}}
 
 		-- {{{ Media keys
-		awful.key({ }, "XF86AudioPlay", function() awful.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause") end),
-		awful.key({ }, "XF86AudioNext", function() awful.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next", false) end),
-		awful.key({ }, "XF86AudioPrev", function() awful.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous", false) end),
-		awful.key({ }, "XF86AudioStop", function() awful.spawn("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop", false) end)
+		awful.key({ }, "XF86AudioPlay", function() awful.spawn("/usr/bin/playerctl play-pause") end),
+		awful.key({ }, "XF86AudioNext", function() awful.spawn("/usr/bin/playerctl next", false) end),
+		awful.key({ }, "XF86AudioPrev", function() awful.spawn("/usr/bin/playerctl previous", false) end),
+		awful.key({ }, "XF86AudioStop", function() awful.spawn("/usr/bin/playerctl stop", false) end)
 		-- }}}
 	),
 
