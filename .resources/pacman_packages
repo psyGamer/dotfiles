@@ -1,9 +1,5 @@
-# All pacman packages required for the dotfiles to work
-
-# Window Manager
 awesome
+neovim
 rofi
 xcape
-
-# Editor
-neovim
+playerctl
