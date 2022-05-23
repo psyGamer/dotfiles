@@ -139,9 +139,9 @@ bindings.keyboard = {
 				  { description = "Increase the number of columns", group = groupNames.layout }),
 		awful.key({ modkey, "Control" }, "l",	  function() awful.tag.incncol(-1, nil, true)	  end,
 				  { description = "Decrease the number of columns", group = groupNames.layout }),
-		awful.key({ modkey,			  }, "l", function() awful.layout.inc( 1)				  end,
+		awful.key({ modkey,			  }, "#", function() awful.layout.inc( 1)				  end,
 				  { description = "Select next", group = groupNames.layout }),
-		awful.key({ modkey, "Shift"   }, "l", function() awful.layout.inc(-1)				  end,
+		awful.key({ modkey, "Shift"   }, "#", function() awful.layout.inc(-1)				  end,
 				  { description = "Select previous", group = groupNames.layout }),
 		-- }}}
 
