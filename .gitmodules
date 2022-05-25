@@ -16,3 +16,6 @@
 [submodule ".config/rofi/modules/rofi-network-manager"]
 	path = .config/rofi/modules/rofi-network-manager
 	url = https://github.com/P3rf/rofi-network-manager.git
+[submodule ".config/polybar/modules/polybar-spotify"]
+	path = .config/polybar/modules/polybar-spotify
+	url = https://github.com/Jvanrhijn/polybar-spotify.git
