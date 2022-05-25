@@ -84,19 +84,6 @@ bindings.keyboard = {
 				  { description = "Open application launcher", group = groupNames.launcher }),
 		awful.key({ modkey, "Shift"   }, "space", function() awful.spawn("/usr/bin/rofi -show run -modi run") end, 
 				  { description = "Open run launcher", group = groupNames.launcher }),
-
-		awful.key({ modkey 			  }, "r",	  function() awful.screen.focused().mypromptbox:run() end,
-				  { description = "Run prompt", group = groupNames.launcher }),
-		awful.key({ modkey 			  }, "x",
-				function()
-					awful.prompt.run {
-						prompt		 = "Run Lua code: ",
-						textbox		 = awful.screen.focused().mypromptbox.widget,
-						exe_callback = awful.util.eval,
-						history_path = awful.util.get_cache_dir() .. "/history_eval"
-					}
-				end,
-				  { description = "Lua execute prompt", group = groupNames.launcher }),
 		-- }}}
 
 		-- {{{ Layout navigation
