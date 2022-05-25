@@ -13,3 +13,6 @@
 [submodule ".resources/simp1e"]
 	path = .resources/simp1e
 	url = https://gitlab.com/zoli111/simp1e.git
+[submodule ".config/rofi/modules/rofi-network-manager"]
+	path = .config/rofi/modules/rofi-network-manager
+	url = https://github.com/P3rf/rofi-network-manager.git
