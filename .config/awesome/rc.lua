@@ -31,7 +31,8 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- Modules
-local bindings = require("bindings")
+local bindings   = require("bindings")
+local createBars = require("bars")
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -137,6 +138,9 @@ awful.screen.connect_for_each_screen(function(s)
 
 	-- Each screen has its own tag table.
 	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+
+	-- Setup bars
+	createBars(s)
 end)
 -- }}}
 
