@@ -63,4 +63,11 @@
 		"key": "ctrl+q",
 		"command": "-workbench.action.quit"
 	}
+	// {
+	// 	"key": "ctrl+s",
+	// 	"command": "terminalCommandKeys.run",
+	// 	"args": {
+	// 		"cmd": "cargo run -q"
+	// 	}
+	// }
 ]

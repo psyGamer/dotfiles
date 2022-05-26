@@ -1,5 +1,5 @@
 {
-	"editor.fontFamily": "'Jetbrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+	"editor.fontFamily": "'Jetbrains Mono', 'FiraCode Nerd Font Mono' , 'Droid Sans Mono', 'monospace', monospace ",
 	"editor.fontSize": 15,
 	"editor.tabCompletion": "on",
 	"editor.insertSpaces": false,
@@ -7,11 +7,11 @@
 	"editor.fontLigatures": true,
 	"editor.inlineSuggest.enabled": true,
 	"editor.renderWhitespace": "all",
-	"editor.formatOnSave": true,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.autoClosingBrackets": "always",
 	"editor.cursorBlinking": "smooth",
 	"editor.cursorSmoothCaretAnimation": true,
+	"editor.formatOnSave": true,
 
 	"window.titleBarStyle": "custom",
 	"workbench.colorTheme": "Celestial",
@@ -37,16 +37,20 @@
 
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
 	},
+	"[lua]": {
+		"editor.useTabs": false
+	},
 
 	"terminal.integrated.fontFamily": "'FiraCode Nerd Font Mono', 'Jetbrains Mono', 'Droid Sans Mono', 'monospace', monospace",
 	"terminal.integrated.fontSize": 16,
+
 	"markdown-preview-enhanced.previewTheme": "github-dark.css",
+
 	"vetur.experimental.templateInterpolationService": true,
 	"vetur.format.options.tabSize": 4,
+
 	"autoimport.useSemiColon": false,
 
-	"vscode_custom_css.imports": [
-		"file:///home/manuel/.vscode/extensions/webrender.synthwave-x-fluoromachine-0.0.12/synthwave-x-fluoromachine.css"
-	],
-	"typescript.updateImportsOnFileMove.enabled": "always"
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"terminal.external.linuxExec": "kitty"
 }
