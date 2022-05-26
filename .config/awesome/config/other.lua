@@ -20,6 +20,8 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+
+local helper = require("helper")
 -- }}}
 
 -- {{{ Error handling
@@ -112,4 +114,34 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
+
+-- {{{ Rounded corners
+local function enable_rounded_corners()
+	if beautiful.rounded and beautiful.rounded > 0 then
+		client.connect_signal("manage", function (c, startup)
+			if not c.fullscreen and not c.maximized then
+				c.shape = helper.rounded_rect(beautiful.rounded)
+			end
+		end)
+
+		local function no_round_corners (c)
+			if c.fullscreen then
+				c.shape = nil
+			elseif c.maximized then
+				c.shape = helper.partially_rounded_rect(beautiful.rounded, true, true, false, false)
+			else
+				c.shape = helper.rounded_rect(beautiful.rounded)
+			end
+		end
+
+		client.connect_signal("property::fullscreen", no_round_corners)
+		client.connect_signal("property::maximized", no_round_corners)
+
+		beautiful.snap_shape = helper.rounded_rect(beautiful.rounded)
+	else
+		beautiful.snap_shape = gears.shape.rectangle
+	end
+end
+enable_rounded_corners()
 -- }}}
