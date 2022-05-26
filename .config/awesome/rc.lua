@@ -27,6 +27,7 @@ local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- Modules
+local global   = require("global")
 local bindings = require("bindings")
                  require("bars")
 
@@ -133,7 +134,11 @@ awful.screen.connect_for_each_screen(function(s)
 	set_wallpaper(s)
 
 	-- Each screen has its own tag table.
-	awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+	awful.tag(global.tags, s, awful.layout.layouts[1])
+
+        if beautiful.at_screen_connect then
+          beautiful.at_screen_connect(s)
+        end
 end)
 -- }}}
 
@@ -272,7 +277,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 awful.spawn.with_shell("systemctl --user mask --runtime plasma-kglobalaccel.service")
 
 -- Compositing & Wallpaper
-awful.spawn.with_shell("picom")
+awful.spawn.with_shell("picom --experimental-backends")
 awful.spawn.with_shell("nitrogen --restore")
 
 awful.spawn.with_shell("~/.scripts/startup.sh") -- TODO Remove personal stuff
