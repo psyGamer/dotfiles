@@ -1,0 +1,7 @@
+All rights granted.
+Do wantevery you want.
+
+EXCEPTIONS:
+  - NeoVim configuration (located under: ".config/nvim"):
+    Licensed under GPL-3.0 (See their license here: https://github.com/NvChad/NvChad/blob/16d54515948889af0a53a254512f25f80eaeb6f9/LICENSE).
+  - All included submodules are licensed under their respective license.
