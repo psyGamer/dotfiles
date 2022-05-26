@@ -9,8 +9,12 @@
 	epository:	https://github.com/psyGamer/dotfiles
 ]]--
 
-local global = {
-	modkey = "Mod4"
-}
+local tags = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
 
-return global
+return {
+	ctrlkey = "Control",
+	altkey = "Mod1",
+	modkey = "Mod4",
+
+	tags = tags,
+}
