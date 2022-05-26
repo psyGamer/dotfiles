@@ -28,7 +28,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- Modules
 local global   = require("global")
-local keys = require("config.keys")
+				 require("config.keys")
                  --require("bars")
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -141,11 +141,6 @@ awful.screen.connect_for_each_screen(function(s)
 end)
 -- }}}
 
--- {{{ Set keybindings
-root.buttons(keys.mouse.global)
-root.keys(keys.keyboard.global)
--- }}}
-
 -- {{{ Rules
 -- Rules to apply to new clients (through the "manage" signal).
 awful.rules.rules = {
@@ -155,8 +150,6 @@ awful.rules.rules = {
 					 border_color = beautiful.border_normal,
 					 focus = awful.client.focus.filter,
 					 raise = true,
-					 keys = keys.keyboard.client,
-					 buttons = keys.mouse.client,
 					 screen = awful.screen.preferred,
 					 placement = awful.placement.no_overlap+awful.placement.no_offscreen
 	 }
