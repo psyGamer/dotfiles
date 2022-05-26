@@ -29,7 +29,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Modules
 local global   = require("global")
 local bindings = require("bindings")
-                 require("bars")
+                 --require("bars")
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
@@ -47,6 +47,7 @@ theme = "arctic-night"
 
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "/theme.lua")
+require("bars")
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
