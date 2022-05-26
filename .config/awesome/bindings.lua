@@ -143,7 +143,11 @@ bindings.keyboard = {
 		awful.key({ }, "XF86AudioPlay", function() awful.spawn("/usr/bin/playerctl play-pause") end),
 		awful.key({ }, "XF86AudioNext", function() awful.spawn("/usr/bin/playerctl next", false) end),
 		awful.key({ }, "XF86AudioPrev", function() awful.spawn("/usr/bin/playerctl previous", false) end),
-		awful.key({ }, "XF86AudioStop", function() awful.spawn("/usr/bin/playerctl stop", false) end)
+		awful.key({ }, "XF86AudioStop", function() awful.spawn("/usr/bin/playerctl stop", false) end),
+		-- }}}
+
+		-- {{{ Utilities
+		awful.key({ }, "Print", function() awful.spawn.with_shell("flameshot full -c -p /home/manuel/Bilder/Screenshots/") end)
 		-- }}}
 	),
 
