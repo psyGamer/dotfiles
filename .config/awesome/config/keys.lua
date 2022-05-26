@@ -20,13 +20,14 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
-
--- Modules
-local global = require("global")
 -- }}}
 
 -- {{{ Variable definitions
-local modkey = global.modkey
+local modkey = "Mod4"
+
+local shift  = "Shift"
+local ctrl   = "Control"
+local alt    = "Mod1"
 
 local groupNames = {
 	awesome  = "awesome",

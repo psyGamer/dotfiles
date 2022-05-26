@@ -28,7 +28,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 
 -- Modules
 local global   = require("global")
-local bindings = require("bindings")
+local keys = require("config.keys")
                  --require("bars")
 
 -- Enable hotkeys help widget for VIM and other apps
@@ -37,8 +37,6 @@ require("awful.hotkeys_popup.keys")
 -- }}}
 
 -- {{{ Variable definitions
-modkey = "Mod4" -- Super (Windows) key
-
 terminal = "kitty"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
@@ -47,7 +45,7 @@ theme = "arctic-night"
 
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/" .. theme .. "/theme.lua")
-require("bars")
+require("layout.bar.status")
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
@@ -144,8 +142,8 @@ end)
 -- }}}
 
 -- {{{ Set keybindings
-root.buttons(bindings.mouse.global)
-root.keys(bindings.keyboard.global)
+root.buttons(keys.mouse.global)
+root.keys(keys.keyboard.global)
 -- }}}
 
 -- {{{ Rules
@@ -157,8 +155,8 @@ awful.rules.rules = {
 					 border_color = beautiful.border_normal,
 					 focus = awful.client.focus.filter,
 					 raise = true,
-					 keys = bindings.keyboard.client,
-					 buttons = bindings.mouse.client,
+					 keys = keys.keyboard.client,
+					 buttons = keys.mouse.client,
 					 screen = awful.screen.preferred,
 					 placement = awful.placement.no_overlap+awful.placement.no_offscreen
 	 }
