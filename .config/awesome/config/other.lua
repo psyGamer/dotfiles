@@ -16,6 +16,7 @@ local awful = require("awful")
 local wibox = require("wibox")
 
 local beautiful = require("beautiful")
+local dpi       = require("beautiful.xresources").apply_dpi
 
 local naughty = require("naughty")
 local menubar = require("menubar")
@@ -63,7 +64,7 @@ client.connect_signal("manage", function (c)
         awful.placement.no_offscreen(c)
     end
 
-    awful.titlebar(c,{size=10})
+	-- Disable the titlebar
     awful.titlebar.hide(c)
 end)
 
@@ -118,30 +119,54 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- {{{ Rounded corners
 local function enable_rounded_corners()
-	if beautiful.rounded and beautiful.rounded > 0 then
-		client.connect_signal("manage", function (c, startup)
-			if not c.fullscreen and not c.maximized then
-				c.shape = helper.rounded_rect(beautiful.rounded)
-			end
-		end)
+	-- if beautiful.rounded and beautiful.rounded > 0 then
+	-- 	client.connect_signal("manage", function (c, startup)
+	-- 		if not c.fullscreen and not c.maximized then
+	-- 			c.shape = helper.rounded_rect(beautiful.rounded)
+	-- 		end
+	-- 	end)
 
-		local function no_round_corners (c)
-			if c.fullscreen then
-				c.shape = nil
-			elseif c.maximized then
-				c.shape = helper.partially_rounded_rect(beautiful.rounded, true, true, false, false)
-			else
-				c.shape = helper.rounded_rect(beautiful.rounded)
-			end
-		end
+	-- 	local function no_round_corners (c)
+	-- 		if c.fullscreen then
+	-- 			c.shape = nil
+	-- 		elseif c.maximized then
+	-- 			c.shape = helper.partially_rounded_rect(beautiful.rounded, true, true, false, false)
+	-- 		else
+	-- 			c.shape = helper.rounded_rect(beautiful.rounded)
+	-- 		end
+	-- 	end
 
-		client.connect_signal("property::fullscreen", no_round_corners)
-		client.connect_signal("property::maximized", no_round_corners)
+	-- 	client.connect_signal("property::fullscreen", no_round_corners)
+	-- 	client.connect_signal("property::maximized", no_round_corners)
 
-		beautiful.snap_shape = helper.rounded_rect(beautiful.rounded)
-	else
-		beautiful.snap_shape = gears.shape.rectangle
-	end
+	-- 	beautiful.snap_shape = helper.rounded_rect(beautiful.rounded)
+	-- else
+	-- 	beautiful.snap_shape = gears.shape.rectangle
+	-- end
+	-- Apply rounded corners to clients if needed
+    if beautiful.border_radius and beautiful.border_radius > 0 then
+        client.connect_signal("manage", function (c, startup)
+            if not c.fullscreen and not c.maximized then
+                c.shape = helper.rounded_rect(beautiful.border_radius)
+            end
+        end)
+
+        -- Fullscreen and maximized clients should not have rounded corners
+        local function no_round_corners (c)
+            if c.fullscreen or c.maximized then
+                c.shape = gears.shape.rectangle
+            else
+                c.shape = helper.rounded_rect(beautiful.border_radius)
+            end
+        end
+
+        client.connect_signal("property::fullscreen", no_round_corners)
+        client.connect_signal("property::maximized", no_round_corners)
+
+        beautiful.snap_shape = helper.rounded_rect(beautiful.border_radius * 3)
+    else
+        beautiful.snap_shape = gears.shape.rectangle
+    end
 end
 enable_rounded_corners()
 -- }}}

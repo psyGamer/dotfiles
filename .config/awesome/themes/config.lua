@@ -13,5 +13,5 @@ return {
 	font = "Jetbrains Mono",
 	gaps = 3,
 	
-	rounded_corners = 8,
+	rounded_corners = 15,
 }

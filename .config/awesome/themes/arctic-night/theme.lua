@@ -27,13 +27,13 @@ theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(theme_config.gaps)
-theme.border_width  = dpi(1)
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
+theme.border_width  = dpi(2)
+theme.border_normal = "#00000000"
+--theme.border_focus  = "#00535d6c"
+theme.border_focus  = "#4e51ac"
 theme.border_marked = "#91231c"
 
-theme.rounded       = dpi(theme_config.rounded_corners)
-theme.rounded_wids  = dpi(theme_config.rounded_corners - 2)
+theme.border_radius = dpi(theme_config.rounded_corners)
 
 -- There are other variable sets
 -- overriding the default one when
