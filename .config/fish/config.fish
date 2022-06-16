@@ -66,3 +66,5 @@ alias lsa='ls -A'
 alias ping="gping"
 
 alias npm="pnpm"
+
+abbr p "sudo pacman"
